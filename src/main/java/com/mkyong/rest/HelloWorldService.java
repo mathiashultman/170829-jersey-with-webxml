@@ -37,7 +37,8 @@ public class HelloWorldService {
 	@POST
 	@Path("/post")
 	@Consumes({MediaType.APPLICATION_JSON})
-	public void setPerson(Person p) {
+	public Response setPerson(Person p) {
 		logger.warning(p.toString());
+		return Response.status(201).build();
 	}
 }
